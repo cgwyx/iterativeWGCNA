@@ -15,9 +15,9 @@ RUN conda config --add channels defaults &&\
     conda install -y rpy2 &&\
     #conda install -c r rpy2
     conda install -y r-wgcna=1.51
-    #git clone https://github.com/cstoeckert/iterativeWGCNA.git &&\
-    #cd iterativeWGCNA &&\
-    #python setup.py install
+    git clone https://github.com/cstoeckert/iterativeWGCNA.git &&\
+    cd /iterativeWGCNA &&\
+    python setup.py install
 
 CMD ["/bin/bash"]
 
