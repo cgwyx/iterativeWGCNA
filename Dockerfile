@@ -7,6 +7,8 @@ FROM conda/miniconda2
 
 MAINTAINER cheng gong <512543469@qq.com>
 
+RUN sudo apt-get install git
+
 RUN conda config --add channels defaults &&\
     conda config --add channels conda-forge &&\
     conda config --add channels r &&\
@@ -14,12 +16,12 @@ RUN conda config --add channels defaults &&\
     conda update --all -y &&\
     conda install -y rpy2 &&\
     #conda install -c r rpy2
-    conda install -y r-wgcna=1.51 &&\
-    git clone https://github.com/cstoeckert/iterativeWGCNA.git
+    conda install -y r-wgcna=1.51
+    #git clone https://github.com/cstoeckert/iterativeWGCNA.git
     #cd /iterativeWGCNA
     #python setup.py install
 
-WORKDIR /iterativeWGCNA
+#WORKDIR /iterativeWGCNA
 
 CMD ["/bin/bash"]
 
