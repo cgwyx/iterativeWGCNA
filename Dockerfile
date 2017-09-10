@@ -7,8 +7,6 @@ FROM conda/miniconda2
 
 MAINTAINER cheng gong <512543469@qq.com>
 
-RUN sudo apt-get install git
-
 RUN conda config --add channels defaults &&\
     conda config --add channels conda-forge &&\
     conda config --add channels r &&\
