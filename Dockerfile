@@ -12,8 +12,8 @@ RUN conda config --add channels defaults &&\
     conda config --add channels r &&\
     conda config --add channels bioconda &&\
     conda update --all -y &&\
+    conda install -y r &&\
     conda install-y -c bioconda r-wgcna &&\
-    #conda install -y r &&\#
     #conda install -y rpy2 &&\#
     #conda install -y -c r rpy2#
     conda install -c bioconda rpy2 &&\
